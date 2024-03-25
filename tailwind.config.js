@@ -20,15 +20,15 @@ module.exports = {
           900: '#111928',
         },
         primary: {
-          50: '#EBF5FF',
-          100: '#E1EFFE',
-          200: '#C3DDFD',
+          50: '#E8F4EA',
+          100: '#E8F4EA',
+          200: '#E8F4EA',
           300: '#A4CAFE',
           600: '#1C64F2',
           700: '#1A56DB',
         },
         blue: {
-          500: '#E1EFFE',
+          500: '#295F48',
         },
         green: {
           50: '#F3FAF7',
