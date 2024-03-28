@@ -1,55 +1,52 @@
-import { forwardRef, useEffect, useRef } from 'react'
-import cn from 'classnames'
+import { forwardRef, useEffect, useRef } from 'react';
+import cn from 'classnames';
 
 type IProps = {
-  placeholder?: string
-  value: string
-  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void
-  className?: string
-  minHeight?: number
-  maxHeight?: number
-  autoFocus?: boolean
-  controlFocus?: number
-  onKeyDown?: (e: React.KeyboardEvent<HTMLTextAreaElement>) => void
-  onKeyUp?: (e: React.KeyboardEvent<HTMLTextAreaElement>) => void
-}
+  placeholder?: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  className?: string;
+  minHeight?: number;
+  maxHeight?: number;
+  autoFocus?: boolean;
+  controlFocus?: number;
+  onKeyDown?: (e: React.KeyboardEvent<HTMLTextAreaElement>) => void;
+  onKeyUp?: (e: React.KeyboardEvent<HTMLTextAreaElement>) => void;
+};
 
 const AutoHeightTextarea = forwardRef(
   (
     { value, onChange, placeholder, className, minHeight = 36, maxHeight = 96, autoFocus, controlFocus, onKeyDown, onKeyUp }: IProps,
     outerRef: any,
   ) => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const ref = outerRef || useRef<HTMLTextAreaElement>(null)
+    const ref = outerRef || useRef<HTMLTextAreaElement>(null);
 
     const doFocus = () => {
       if (ref.current) {
-        ref.current.setSelectionRange(value.length, value.length)
-        ref.current.focus()
-        return true
+        ref.current.setSelectionRange(value.length, value.length);
+        ref.current.focus();
+        return true;
       }
-      return false
-    }
+      return false;
+    };
 
     const focus = () => {
       if (!doFocus()) {
-        let hasFocus = false
+        let hasFocus = false;
         const runId = setInterval(() => {
-          hasFocus = doFocus()
-          if (hasFocus)
-            clearInterval(runId)
-        }, 100)
+          hasFocus = doFocus();
+          if (hasFocus) clearInterval(runId);
+        }, 100);
       }
-    }
+    };
 
     useEffect(() => {
-      if (autoFocus)
-        focus()
-    }, [])
+      if (autoFocus) focus();
+    }, [autoFocus]);
+
     useEffect(() => {
-      if (controlFocus)
-        focus()
-    }, [controlFocus])
+      if (controlFocus) focus();
+    }, [controlFocus]);
 
     return (
       <div className='relative'>
@@ -60,6 +57,7 @@ const AutoHeightTextarea = forwardRef(
           ref={ref}
           autoFocus={autoFocus}
           className={cn(className, 'absolute inset-0 resize-none overflow-hidden')}
+          style={{ backgroundColor: '#E8F4EA' }} // Added light green background here
           placeholder={placeholder}
           onChange={onChange}
           onKeyDown={onKeyDown}
@@ -67,8 +65,8 @@ const AutoHeightTextarea = forwardRef(
           value={value}
         />
       </div>
-    )
+    );
   },
-)
+);
 
-export default AutoHeightTextarea
+export default AutoHeightTextarea;
