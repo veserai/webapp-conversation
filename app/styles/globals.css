@@ -81,13 +81,9 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  /* background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
+  background-color: #E8F4EA; /* Solid green background */
 }
+
 
 a {
   color: inherit;
