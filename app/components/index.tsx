@@ -564,7 +564,7 @@ const Main: FC = () => {
     return <Loading type='app' />
 
   return (
-    <div className='bg-gray-100'>
+    <div className='bg-green-50'>
       <Header
         title={APP_INFO.title}
         isMobile={isMobile}
@@ -576,7 +576,7 @@ const Main: FC = () => {
         {!isMobile && renderSidebar()}
         {isMobile && isShowSidebar && (
           <div className='fixed inset-0 z-50'
-            style={{ backgroundColor: 'rgba(41, 95, 72, 0.2)' }}
+            style={{ backgroundColor: 'rgba(232, 244, 234, 0.2)' }}
             onClick={hideSidebar}
           >
             <div className='inline-block' onClick={e => e.stopPropagation()}>
