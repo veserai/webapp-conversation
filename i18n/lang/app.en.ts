@@ -1,21 +1,21 @@
 const translation = {
   common: {
-    welcome: 'Welcome to use',
+    welcome: 'Willkommen bei der',
     appUnavailable: 'App is unavailable',
     appUnkonwError: 'App is unavailable',
   },
   chat: {
-    newChat: 'New chat',
-    newChatDefaultName: 'New conversation',
-    openingStatementTitle: 'Opening statement',
-    powerBy: 'Powered by',
+    newChat: 'Neuer Chat',
+    newChatDefaultName: 'Neuer Chat',
+    openingStatementTitle: 'Herzlich Willkommen',
+    powerBy: 'Erstellt von',
     prompt: 'Prompt',
-    privatePromptConfigTitle: 'Conversation settings',
+    privatePromptConfigTitle: 'Einstellungen',
     publicPromptConfigTitle: 'Initial Prompt',
     configStatusDes: 'Before start, you can modify conversation settings',
     configDisabled:
       'Previous session settings have been used for this session.',
-    startChat: 'Start Chat',
+    startChat: 'Chat starten',
     privacyPolicyLeft:
       'Please read the ',
     privacyPolicyMiddle:
