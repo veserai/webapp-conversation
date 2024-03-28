@@ -14,11 +14,9 @@ export const AppInfoComp: FC<{ siteInfo: AppInfo }> = ({ siteInfo }) => {
   const { t } = useTranslation()
   return (
     <div>
-    <div className='flex items-center py-2 text-xl font-medium rounded-md' style={{color: '#1C244B'}}>
-  Willkommen bei der Vorsorgeberatung
-</div>
-<p className='text-sm text-gray-500'>{siteInfo.description}</p>
-</div>
+      <div className='flex items-center py-2 text-xl font-medium text-gray-700 rounded-md'>👏 {t('app.common.welcome')} {siteInfo.title}</div>
+      <p className='text-sm text-gray-500'>{siteInfo.description}</p>
+    </div>
   )
 }
 export const PromptTemplate: FC<{ html: string }> = ({ html }) => {
