@@ -20,7 +20,7 @@
       #0071ff33 160deg,
       transparent 360deg);
   --secondary-glow: radial-gradient(rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 0));
+      rgba(232, 244, 234, 0));
 
   --tile-start-rgb: 41, 95, 72;
   --tile-end-rgb: 228, 232, 233;
