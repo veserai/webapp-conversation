@@ -16,7 +16,7 @@ import type { Emoji } from '@/types/tools'
 
 const OperationBtn = ({ innerContent, onClick, className }: { innerContent: React.ReactNode; onClick?: () => void; className?: string }) => (
   <div
-    className={`relative box-border flex items-center justify-center h-7 w-7 p-0.5 rounded-lg bg-white cursor-pointer text-gray-500 hover:text-gray-800 ${className ?? ''}`}
+    className={`relative box-border flex items-center justify-center h-7 w-7 p-0.5 rounded-lg bg-green cursor-pointer text-gray-500 hover:text-gray-800 ${className ?? ''}`}
     style={{ boxShadow: '0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -2px rgba(0, 0, 0, 0.05)' }}
     onClick={onClick && onClick}
   >
@@ -94,7 +94,7 @@ const Answer: FC<IAnswerProps> = ({
         content={isLike ? '取消赞同' : '取消反对'}
       >
         <div
-          className={'relative box-border flex items-center justify-center h-7 w-7 p-0.5 rounded-lg bg-white cursor-pointer text-gray-500 hover:text-gray-800'}
+          className={'relative box-border flex items-center justify-center h-7 w-7 p-0.5 rounded-lg bg-green cursor-pointer text-gray-500 hover:text-gray-800'}
           style={{ boxShadow: '0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -2px rgba(0, 0, 0, 0.05)' }}
           onClick={async () => {
             await onFeedback?.(id, { rating: null })
@@ -176,7 +176,7 @@ const Answer: FC<IAnswerProps> = ({
         </div>
         <div className={`${s.answerWrap}`}>
           <div className={`${s.answer} relative text-sm text-gray-900`}>
-            <div className={'ml-2 py-3 px-4 bg-gray-100 rounded-tr-2xl rounded-b-2xl'}>
+            <div className={'ml-2 py-3 px-4 bg-green-50 rounded-tr-2xl rounded-b-2xl'}>
               {(isResponsing && (isAgentMode ? (!content && (agent_thoughts || []).filter(item => !!item.thought || !!item.tool).length === 0) : !content))
                 ? (
                   <div className='flex items-center justify-center w-6 h-5'>
