@@ -15,7 +15,7 @@ const translation = {
     configStatusDes: 'Before start, you can modify conversation settings',
     configDisabled:
       'Previous session settings have been used for this session.',
-    startChat: 'Chat starten',
+    startChat: 'Los gehts!',
     privacyPolicyLeft:
       'Please read the ',
     privacyPolicyMiddle:
