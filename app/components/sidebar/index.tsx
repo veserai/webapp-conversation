@@ -55,7 +55,7 @@ const Sidebar: FC<ISidebarProps> = ({
               key={item.id}
               className={classNames(
                 isCurrent
-                  ? 'bg-primary-50 text-primary-600'
+                  ? 'bg-primary-50 text-gray-700'
                   : 'text-gray-700 hover:bg-green-100 hover:text-gray-700',
                 'group flex items-center rounded-md px-2 py-2 text-sm font-medium cursor-pointer',
               )}
@@ -63,7 +63,7 @@ const Sidebar: FC<ISidebarProps> = ({
               <ItemIcon
                 className={classNames(
                   isCurrent
-                    ? 'text-primary-600'
+                    ? 'text-gray-400'
                     : 'text-gray-400 group-hover:text-gray-500',
                   'mr-3 h-5 w-5 flex-shrink-0',
                 )}
@@ -75,7 +75,7 @@ const Sidebar: FC<ISidebarProps> = ({
         })}
       </nav>
       {/* <a className="flex flex-shrink-0 p-4" href="https://langgenius.ai/" target="_blank">
-        <Card><div className="flex flex-row items-center"><ChatBubbleOvalLeftEllipsisSolidIcon className="text-primary-600 h-6 w-6 mr-2" /><span>LangGenius</span></div></Card>
+        <Card><div className="flex flex-row items-center"><ChatBubbleOvalLeftEllipsisSolidIcon className="text-gray-700 h-6 w-6 mr-2" /><span>LangGenius</span></div></Card>
       </a> */}
       <div className="flex flex-shrink-0 pr-4 pb-4 pl-4">
         <div className="text-gray-400 font-normal text-xs">© {copyRight} {(new Date()).getFullYear()}</div>
