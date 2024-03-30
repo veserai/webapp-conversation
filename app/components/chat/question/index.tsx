@@ -16,7 +16,7 @@ const Question: FC<IQuestionProps> = ({ id, content, useCurrentUserAvatar, imgSr
   return (
     <div className='flex items-start justify-end' key={id}>
       <div>
-        <div className={`${s.question} relative text-sm text-gray-900`}>
+        <div className={`${s.question} relative text-sm text-green-100`}>
           <div
             className={'mr-2 py-3 px-4 bg-green-100 rounded-tl-2xl rounded-b-2xl'}
           >
@@ -29,7 +29,7 @@ const Question: FC<IQuestionProps> = ({ id, content, useCurrentUserAvatar, imgSr
       </div>
       {useCurrentUserAvatar
         ? (
-          <div className='w-10 h-10 shrink-0 leading-10 text-center mr-2 rounded-full bg-green-100 text-white'>
+          <div className='w-10 h-10 shrink-0 leading-10 text-center mr-2 rounded-full bg-green-100 text-black'>
             {userName?.[0].toLocaleUpperCase()}
           </div>
         )
