@@ -317,11 +317,7 @@ const Main: FC = () => {
     setChatList(newListWithAnswer)
   }
 
-  const handleSend = async (message: string, files?: VisionFile[]) => {
-    if (isResponsing) {
-      notify({ type: 'info', message: t('app.errorMessage.waitForResponse') })
-      return
-    }
+
     const data: Record<string, any> = {
       inputs: currInputs,
       query: message,
