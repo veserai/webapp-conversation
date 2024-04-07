@@ -37,7 +37,7 @@ const Main: FC = () => {
   const [promptConfig, setPromptConfig] = useState<PromptConfig | null>(null)
   const [inited, setInited] = useState<boolean>(false)
   // in mobile, show sidebar by click button
-  const [isShowSidebar, { setTrue: showSidebar, setFalse: hideSidebar }] = useBoolean(true)
+  const [isShowSidebar, { setTrue: showSidebar, setFalse: hideSidebar }] = useBoolean(false)
   const [visionConfig, setVisionConfig] = useState<VisionSettings | undefined>({
     enabled: false,
     number_limits: 2,
@@ -47,10 +47,10 @@ const Main: FC = () => {
 
   useEffect(() => {
     if (APP_INFO?.title)
-      document.title = `${APP_INFO.title} - Erstellt von Wirth Kirkali & Partner`
+      document.title = `${APP_INFO.title} - Erstellt von Wirth Kirkali`
   }, [APP_INFO?.title])
 
-  
+  // onData change thought (the produce obj). https://github.com/immerjs/immer/issues/576
   useEffect(() => {
     setAutoFreeze(false)
     return () => {
@@ -317,7 +317,11 @@ const Main: FC = () => {
     setChatList(newListWithAnswer)
   }
 
-
+  const handleSend = async (message: string, files?: VisionFile[]) => {
+    if (isResponsing) {
+      notify({ type: 'info', message: t('app.errorMessage.waitForResponse') })
+      return
+    }
     const data: Record<string, any> = {
       inputs: currInputs,
       query: message,
@@ -560,19 +564,19 @@ const Main: FC = () => {
     return <Loading type='app' />
 
   return (
-    <div className='bg-green-50'>
+    <div className='bg-gray-100'>
       <Header
         title={APP_INFO.title}
         isMobile={isMobile}
         onShowSideBar={showSidebar}
         onCreateNewChat={() => handleConversationIdChange('-1')}
       />
-      <div className="flex rounded-t-2xl bg-green overflow-hidden">
+      <div className="flex rounded-t-2xl bg-white overflow-hidden">
         {/* sidebar */}
         {!isMobile && renderSidebar()}
         {isMobile && isShowSidebar && (
           <div className='fixed inset-0 z-50'
-            style={{ backgroundColor: 'rgba(232, 244, 234, 0.2)' }}
+            style={{ backgroundColor: 'rgba(35, 56, 118, 0.2)' }}
             onClick={hideSidebar}
           >
             <div className='inline-block' onClick={e => e.stopPropagation()}>
