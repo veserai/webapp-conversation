@@ -564,7 +564,7 @@ const Main: FC = () => {
     return <Loading type='app' />
 
   return (
-    <div className='bg-gray-100'>
+    <div className='bg-green-50'>
       <Header
         title={APP_INFO.title}
         isMobile={isMobile}
