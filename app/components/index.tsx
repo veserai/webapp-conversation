@@ -410,8 +410,8 @@ const Main: FC = () => {
         })
       },
       async onCompleted(hasError?: boolean) {
-        if (hasError)
-          return
+       // if (hasError)
+         // return
 
         if (getConversationIdChangeBecauseOfNew()) {
           const { data: allConversations }: any = await fetchConversations()
