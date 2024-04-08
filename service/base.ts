@@ -134,7 +134,7 @@ const handleStream = (response: Response, onData: IOnData, onCompleted?: IOnComp
           messageId: '',
           errorMessage: `${e}`,
         })
-        hasError = true
+        hasError = false
         onCompleted?.(true)
         return
       }
