@@ -30,7 +30,7 @@ export type IChatProps = {
   checkCanSend?: () => boolean
   onSend?: (message: string, files: VisionFile[]) => void
   useCurrentUserAvatar?: boolean
-  isResponsing?: boolean
+  //isResponsing?: boolean
   controlClearQuery?: number
   visionConfig?: VisionSettings
 }
