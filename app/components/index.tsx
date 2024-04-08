@@ -37,7 +37,7 @@ const Main: FC = () => {
   const [promptConfig, setPromptConfig] = useState<PromptConfig | null>(null)
   const [inited, setInited] = useState<boolean>(false)
   // in mobile, show sidebar by click button
-  const [isShowSidebar, { setTrue: showSidebar, setFalse: hideSidebar }] = useBoolean(true)
+  const [isShowSidebar, { setTrue: showSidebar, setFalse: hideSidebar }] = useBoolean(false)
   const [visionConfig, setVisionConfig] = useState<VisionSettings | undefined>({
     enabled: false,
     number_limits: 2,
@@ -318,8 +318,7 @@ const Main: FC = () => {
   }
 
   const handleSend = async (message: string, files?: VisionFile[]) => {
-    if (isResponsing) {
-      notify({ type: 'info', message: t('app.errorMessage.waitForResponse') })
+  //does nothing
       return
     }
     const data: Record<string, any> = {
