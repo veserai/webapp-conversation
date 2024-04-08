@@ -99,7 +99,7 @@ const handleStream = (response: Response, onData: IOnData, onCompleted?: IOnComp
                 errorMessage: bufferObj?.message,
                 errorCode: bufferObj?.code,
               })
-              hasError = true
+              hasError = false
               onCompleted?.(true)
               return
             }
