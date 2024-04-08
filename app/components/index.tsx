@@ -374,7 +374,7 @@ const Main: FC = () => {
     const prevTempNewConversationId = getCurrConversationId() || '-1'
     let tempNewConversationId = ''
 
-    setResponsingTrue()
+    setResponsingFalse()
     sendChatMessage(data, {
       getAbortController: (abortController) => {
         setAbortController(abortController)
@@ -520,7 +520,7 @@ const Main: FC = () => {
         ))
       },
       onError() {
-        setResponsingTrue()
+        setResponsingFalse()
         // role back placeholder answer
         setChatList(produce(getChatList(), (draft) => {
           draft.splice(draft.findIndex(item => item.id === placeholderAnswerId), 1)
