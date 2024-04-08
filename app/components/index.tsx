@@ -262,7 +262,7 @@ const Main: FC = () => {
     })()
   }, [])
 
-  const [isResponsing, { setTrue: setResponsingFalse, setFalse: setResponsingFalse }] = useBoolean(false)
+  const [isResponsing, { setTrue: setResponsingTrue, setFalse: setResponsingFalse }] = useBoolean(false)
   const [abortController, setAbortController] = useState<AbortController | null>(null)
   const { notify } = Toast
   const logError = (message: string) => {
@@ -520,7 +520,7 @@ const Main: FC = () => {
         ))
       },
       onError() {
-        setResponsingFalse()
+        setResponsingTrue()
         // role back placeholder answer
         setChatList(produce(getChatList(), (draft) => {
           draft.splice(draft.findIndex(item => item.id === placeholderAnswerId), 1)
