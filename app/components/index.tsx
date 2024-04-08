@@ -411,7 +411,6 @@ const Main: FC = () => {
       },
       async onCompleted(hasError?: boolean) {
         if (hasError)
-          setResponsingTrue()
           return
 
         if (getConversationIdChangeBecauseOfNew()) {
