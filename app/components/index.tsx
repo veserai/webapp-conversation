@@ -417,8 +417,8 @@ const Main: FC = () => {
           const { data: allConversations }: any = await fetchConversations()
           //const newItem: any = await generationConversationName(allConversations[0].id)
 
-          const newAllConversations = produce(allConversations, (draft: any) => {
-            draft[0].name = newItem.name
+          //const newAllConversations = produce(allConversations, (draft: any) => {
+            //draft[0].name = newItem.name
           })
           setConversationList(newAllConversations as any)
         }
