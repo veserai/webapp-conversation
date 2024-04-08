@@ -374,7 +374,7 @@ const Main: FC = () => {
     const prevTempNewConversationId = getCurrConversationId() || '-1'
     let tempNewConversationId = ''
 
-    setResponsingFalse()
+    setResponsingTrue()
     sendChatMessage(data, {
       getAbortController: (abortController) => {
         setAbortController(abortController)
@@ -411,6 +411,7 @@ const Main: FC = () => {
       },
       async onCompleted(hasError?: boolean) {
         if (hasError)
+          setResponsingFalse()
           return
 
         if (getConversationIdChangeBecauseOfNew()) {
