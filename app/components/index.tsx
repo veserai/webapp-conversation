@@ -410,7 +410,7 @@ const Main: FC = () => {
         })
       },
       async onCompleted(hasError?: boolean) {
-        if (1 === 2)
+        if (hasError)
           return
 
         if (getConversationIdChangeBecauseOfNew()) {
