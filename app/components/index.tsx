@@ -415,7 +415,7 @@ const Main: FC = () => {
 
         if (getConversationIdChangeBecauseOfNew()) {
           const { data: allConversations }: any = await fetchConversations()
-          const newItem: any = await generationConversationName()
+          const newItem: any = await generationConversationName(allConversations[0].1)
 
           const newAllConversations = produce(allConversations, (draft: any) => {
             draft[0].name = newItem.name
