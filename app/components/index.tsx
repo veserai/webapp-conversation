@@ -493,6 +493,7 @@ const Main: FC = () => {
                 ...responseItem,
               })
             })
+          setResponsingFalse()
           setChatList(newListWithAnswer)
           return
         }
