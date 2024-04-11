@@ -586,7 +586,7 @@ const Main: FC = () => {
       <Header
         title={APP_INFO.title}
         isMobile={isMobile}
-        onShowSideBar={showSidebar}
+        onShowSideBar={hideSidebar}
         onCreateNewChat={() => handleConversationIdChange('-1')}
       />
       <div className="flex rounded-t-2xl bg-green overflow-hidden">
