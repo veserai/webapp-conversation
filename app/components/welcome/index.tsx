@@ -81,7 +81,7 @@ const Welcome: FC<IWelcomeProps> = ({
   }
 
   const renderHeader = () => {
-    return ()
+    return (
       <div className='absolute top-0 left-0 right-0 flex items-center justify-between border-b border-gray-100 mobile:h-12 tablet:h-16 px-8 bg-green-50'>
         <div className='text-green-50'>{conversationName}</div>
       </div>
