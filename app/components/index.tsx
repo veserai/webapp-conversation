@@ -591,7 +591,7 @@ const Main: FC = () => {
       />
       <div className="flex rounded-t-2xl bg-green overflow-hidden">
         {/* sidebar */}
-        {!isMobile && isShowSidebar()}
+        {!isMobile && renderSidebar()}
         {isMobile && isShowSidebar && (
           <div className='fixed inset-0 z-50'
             style={{ backgroundColor: 'rgba(232, 244, 234, 0.2)' }}
