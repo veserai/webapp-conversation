@@ -14,7 +14,7 @@ export type IHeaderProps = {
 const Header: FC<IHeaderProps> = ({
   title,
   isMobile,
-  onShowSideBar,
+  //onShowSideBar,
   onCreateNewChat,
 }) => {
   return (
