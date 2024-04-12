@@ -21,6 +21,7 @@ export type ISidebarProps = {
   currentId: string
   onCurrentIdChange: (id: string) => void
   list: ConversationItem[]
+  visible: boolean;
 }
 
 const Sidebar: FC<ISidebarProps> = ({
@@ -28,8 +29,12 @@ const Sidebar: FC<ISidebarProps> = ({
   currentId,
   onCurrentIdChange,
   list,
+  visible, // Destructure the new prop
 }) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
+
+  if (!visible) return null; // This line controls the rendering based on visibility
+
   return (
     <div
       className="shrink-0 flex flex-col overflow-y-auto bg-green pc:w-[244px] tablet:w-[192px] mobile:w-[240px]  border-r border-gray-200 tablet:h-[calc(100vh_-_3rem)] mobile:h-screen"
